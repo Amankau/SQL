@@ -26,3 +26,8 @@ order by Salary desc
 limit 3) as third_highest
 order by Salary
 limit 1;
+
+Result:
+| Salary | 
+| ------------- |
+| 400     | 
