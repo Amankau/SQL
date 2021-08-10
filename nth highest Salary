@@ -1,0 +1,28 @@
+Find the nth highest Salary from the table (say we wish to find the 3rd highest Salary)
+
+Table Schema:
+
+Create table Employee
+( Id int,
+ Salary varchar(50)
+ );
+ 
+ Insert Into Employee (Id,Salary)
+ Values (1, 100);
+  Insert Into Employee (Id,Salary)
+ Values (2, 200);
+  Insert Into Employee (Id,Salary)
+ Values (3, 400);
+  Insert Into Employee (Id,Salary)
+ Values (4, 500);
+  Insert Into Employee (Id,Salary)
+ Values (5, 800);
+
+SQL Query:
+
+Select Salary from (
+Select Salary from Employee
+order by Salary desc
+limit 3) as third_highest
+order by Salary
+limit 1;
